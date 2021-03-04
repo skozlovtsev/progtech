@@ -23,7 +23,7 @@ void ex_num1() {
 
 
 void ex_num3(){
-    int arr[N] = { -10, 5, 8, -3, 9, 11, 24, -4, 7, 6 };
+        int arr[N] = { -10, 5, 8, -3, 9, 11, 24, -4, 7, 6 };
 	int sum = 0;
 	float med;
 	
@@ -42,7 +42,7 @@ void ex_num3(){
 void ex_num4_1(){
 	int arr[N] = { -10, 5, 8, -3, 9, 11, 24, -4, 7, 6 };
 	
-	sort(arr, arr +N);
+	sort(arr, arr + N);
 	cout << arr[0] << " " << arr[1] << endl;
 };
 
@@ -178,7 +178,7 @@ void ex_num10(){
 		sum = 0;
 	};
 	cout << endl;
-    cout << string_num << endl;
+        cout << string_num << endl;
 };
 
 

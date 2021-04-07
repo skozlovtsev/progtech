@@ -19,3 +19,39 @@ int main() {
 	};
 	return 0;
 }
+
+
+class My2dArray {
+public:
+	int** arr;
+
+	My2dArray(int hi, int wi);
+	My2dArray(int hi, int wi) {
+		h = hi;
+	    w = wi;
+		arr = new int* [h];
+		for (int i = 0; i < h; i++) {
+			arr[i] = new int[w];
+		};
+	};
+
+	int get_h() {
+		return h;
+	};
+
+	int get_w() {
+		return w;
+	};
+
+	void fill_random(int min, int max) {
+		srand(time(nullptr));
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				arr[i][j] = rand() % max;
+			};
+		};
+	};
+private:
+	int h;
+	int w;
+};

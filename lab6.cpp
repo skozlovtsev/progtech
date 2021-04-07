@@ -57,6 +57,14 @@ double ex_num5(double x) {
 };
 
 
+int ex_num6(int m){
+	static int save = 0;
+	int s = save;
+	save = m;
+	return 1 + s;
+};
+
+
 int main() {
 	/*ex_num2();
 	ex_num2();

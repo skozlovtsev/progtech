@@ -71,11 +71,6 @@ public:
 		};
 		return min;
 	};
-	
-	int get_min()
-	{
-		return 0;
-	};
 
 	int get_h() {
 		return h;

@@ -20,7 +20,7 @@ int main() {
 	return 0;
 }
 
-
+//7.6.9
 class My2dArray {
 public:
 	int** arr;
@@ -33,6 +33,48 @@ public:
 		for (int i = 0; i < h; i++) {
 			arr[i] = new int[w];
 		};
+	};
+	
+	void visualise(){
+	        for (int i = 0; i < h; i++){
+		        for (int j = 0; j < h; j++){
+		                cout << arr[i][j] << " ";
+		        };
+		cout << endl;	
+		};
+	};
+	
+	int get_max()
+	{
+		int max = -2147483647;
+		 for (int i = 0; i < h; i++){
+		        for (int j = 0; j < h; j++){
+				if (max < arr[i][j])
+				{
+					max = arr[i][j];
+				};
+		        };	
+		};
+		return max;
+	};
+	
+	int get_min()
+	{
+		int min = 2147483647;
+		 for (int i = 0; i < h; i++){
+		        for (int j = 0; j < h; j++){
+				if (max > arr[i][j])
+				{
+					min = arr[i][j];
+				};
+		        };	
+		};
+		return min;
+	};
+	
+	int get_min()
+	{
+		return 0;
 	};
 
 	int get_h() {
@@ -47,7 +89,7 @@ public:
 		srand(time(nullptr));
 		for (int i = 0; i < h; i++) {
 			for (int j = 0; j < w; j++) {
-				arr[i][j] = rand() % max;
+				arr[i][j] = min + rand() % (max + 1);
 			};
 		};
 	};

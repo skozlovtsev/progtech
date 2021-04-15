@@ -28,7 +28,7 @@ public:
 	My2dArray(int hi, int wi);
 	My2dArray(int hi, int wi) {
 		h = hi;
-	    w = wi;
+	        w = wi;
 		arr = new int* [h];
 		for (int i = 0; i < h; i++) {
 			arr[i] = new int[w];
@@ -87,6 +87,19 @@ public:
 				arr[i][j] = min + rand() % (max + 1);
 			};
 		};
+	};
+	
+	int** sort(int axis){
+		int** array; 
+		array = new int* [h];
+		for (int i = 0; i < h; i++) {
+			arr[i] = new int[w];
+		};
+		switch(axis){
+			case 0:
+			case 1:
+		};
+		return array;
 	};
 private:
 	int h;

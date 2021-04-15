@@ -163,12 +163,19 @@ private:
 };
 
 int main() {
-	int ar[3] = {};
-	ex_num8_dynamic(ar, 3);
-	for (int i = 0; i < 3; i++) {
+	int n = 9;
+	int ar[n] = {};
+	ex_num8_dynamic(ar, n);
+	for (int i = 0; i < n; i++) {
 		cout << ar[i] << " ";
 	};
-	My2dArray marr(5, 5);
+	int* arr;
+	arr = sort(ar, n);
+	for (int i = 0; i < n; i++) {
+		cout << arr[i] << " ";
+	};
+	cout << endl;
+	My2dArray marr(3, 2);
 	marr.fill_random(30, 60);
 	marr.visualise();
 	return 0;

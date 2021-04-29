@@ -9,6 +9,7 @@ void ex_num8_dynamic(int* arr, int size) {
 	for (int i = 0; i < size; i++) {
 		arr[i] = rand() % 100;
 	};
+	delete [] arr;
 };
 
 struct Pivot
